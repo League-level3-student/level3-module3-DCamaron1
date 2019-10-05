@@ -1,6 +1,6 @@
 package _02_Cities;
 
-public abstract class City {
+public class City {
 	protected int population;
 	protected double growthRate;
 	
@@ -17,5 +17,7 @@ public abstract class City {
 		return growthRate;
 	}
 	
-	abstract double getAnnualTaxes();
+	public double getAnnualTaxes() {
+		return 0;
+	}
 }
