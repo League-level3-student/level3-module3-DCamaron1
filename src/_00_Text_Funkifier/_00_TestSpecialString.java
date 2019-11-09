@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class _00_TestSpecialString {
 
 	//1. Take a look at the TextFunkifier interface and 
-	//   the abstract class SpecialString. Notice that the
+	//   the class SpecialString. Notice that the
 	//   SpecialString class implements TextFunkifier. Then 
 	//   take a look at the BackwardsString class. Notice 
 	//   that it extends SpecialString. This means that is also
@@ -38,6 +38,8 @@ public class _00_TestSpecialString {
 	//   the JUnitTest case below to test your customized Special String.
 	@Test
 	public void testCustomString() {
-	
+		CustomString cs = new CustomString("The last test");
+		System.out.println(cs);
+		assertEquals("Tha last tast", cs.toString());
 	}
 }

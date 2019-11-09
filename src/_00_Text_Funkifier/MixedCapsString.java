@@ -1,5 +1,7 @@
 package _00_Text_Funkifier;
 
+import java.util.Locale;
+
 public class MixedCapsString extends SpecialString{
 
 	public MixedCapsString(String s) {
@@ -8,8 +10,17 @@ public class MixedCapsString extends SpecialString{
 
 	@Override
 	public String funkifyText(String s) {
-		
-		return "";
+		char[] array = s.toCharArray();
+		String newString = "";
+		for (int i = 0; i < array.length; i++) {
+			if(i%2 == 1){
+				array[i]= Character.toUpperCase(array[i]);
+			}else {
+				array[i]= Character.toLowerCase(array[i]);
+			}
+			newString = newString + array[i];
+		}
+		return newString;
 	}
 
 }
